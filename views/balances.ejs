@@ -1,30 +1,37 @@
 <% include top %>
+<script>
+function logout() {
+	localStorage.removeItem('username');
+	localStorage.removeItem('password');
+	window.location = '/';
+}
+</script>
 
 <div id='controlBar'>
-	<div id='username'><%= username %></div>
+	<span id='username'><%= username %></span>
 	<a id='logOut' href='javascript:logout()'>Forget me</a>
 </div>
 
 <div id='balances'>
 	<div>
-		<table>
-			<tr>
-				<td>Flex points</td>
-				<td><%= flexPoints %></td>
-			</tr>
-			<tr>
-				<td>Meal credits</td>
-				<td><%= mealCredits %></td>
-			</tr>
-			<tr>
-				<td>Bear bucks</td>
-				<td><%= bearBucks %></td>
-			</tr>
-			<tr>
-				<td>PawPrints</td>
-				<td><%= pawPrints %></td>
-			</tr>
-		</table>
+		<ul>
+			<li>
+				<div>Flex points</div>
+				<div><%= flexPoints %></div>
+			</li>
+			<li>
+				<div>Meal credits</div>
+				<div><%= mealCredits %></div>
+			</li>
+			<li>
+				<div>Bear bucks</div>
+				<div><%= bearBucks %></div>
+			</li>
+			<li>
+				<div>PawPrints</div>
+				<div><%= pawPrints %></div>
+			</li>
+		</ul>
 	</div>
 </div>
 

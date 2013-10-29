@@ -1,13 +1,29 @@
 <% include top %>
 
-<div id='loginContainer' class='centered'>
+<script>
+$(document).ready(function() {
+	if (localStorage.username) {
+		$('#username').val(localStorage.username);
+		$('#password').val(localStorage.password);
+		if (location.hash != '#fail') {
+			$('#login').submit();
+		}
+	}
+	$('#login').submit(function() {
+		localStorage.username = $('#username').val();
+		localStorage.password = $('#password').val();
+	})
+})
+</script>
+
+<div id='loginContainer'>
 	<div>
 		<form id='login' method='POST'>
 			<p>Log in to check your Flex Points, Meal Credits, PawPrints and BearBucks balances</p>
 			<label for='username'>Brown online username</label>
-			<input id='username' name='username' placeholder='Brown online username' type='text'/>
+			<input id='username' name='username' placeholder='Brown online username' type='text' autocapitalize="off" autocorrect="off"/>
 			<label for='password'>Password</label>
-			<input id='password' name='password' type='password' placeholder='Password'/>
+			<input id='password' name='password' type='password' placeholder='Password' autocapitalize="off" autocorrect="off"/>
 			<input type='submit' value='Check Balances'/>
 		</form>
 	</div>
