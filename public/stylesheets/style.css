@@ -1,0 +1,57 @@
+html,
+body {
+  font: 14px "Lucida Grande", sans-serif;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+a {
+  color: #00B7FF;
+}
+.centered {
+  display: table;
+}
+.centered > div {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+#loginContainer {
+  width: 100%;
+  height: 100%;
+}
+#loginContainer form {
+  border: 3px solid gray;
+  border-radius: 15px;
+  width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#loginContainer form input[type=text],
+#loginContainer form input[type=password] {
+  display: block;
+  width: 90%;
+  padding: 5px 5%;
+  font-size: large;
+  border: 1px solid gray;
+  border-width: 1px 0px;
+  margin: 0px;
+  margin-bottom: -1px;
+  border-radius: 0px;
+}
+#loginContainer form label {
+  display: none;
+}
+#loginContainer form input[type=submit] {
+  width: 100%;
+  font-size: large;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+  margin: 0px;
+  border: 0px solid black;
+  padding: 5px;
+  padding-top: 7px;
+  border-radius: 0px 0px 7px 7px;
+}

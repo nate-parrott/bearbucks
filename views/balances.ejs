@@ -1,0 +1,31 @@
+<% include top %>
+
+<div id='controlBar'>
+	<div id='username'><%= username %></div>
+	<a id='logOut' href='javascript:logout()'>Forget me</a>
+</div>
+
+<div id='balances'>
+	<div>
+		<table>
+			<tr>
+				<td>Flex points</td>
+				<td><%= flexPoints %></td>
+			</tr>
+			<tr>
+				<td>Meal credits</td>
+				<td><%= mealCredits %></td>
+			</tr>
+			<tr>
+				<td>Bear bucks</td>
+				<td><%= bearBucks %></td>
+			</tr>
+			<tr>
+				<td>PawPrints</td>
+				<td><%= pawPrints %></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<% include bottom %>
