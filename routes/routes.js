@@ -1,7 +1,8 @@
 var scrape = require('../scrape')
 
 exports.index = function(req, res) {
-  res.render('index', {});
+	var error = req.query.error? req.query.error : '';
+	res.render('index', {error: error});
 };
 
 exports.balances = function(req, res) {
@@ -13,7 +14,7 @@ exports.balances = function(req, res) {
 			params.username = username;
 			res.render('balances', params);
 		} else {
-			res.redirect('/#fail')
+			res.redirect('/?error=login')
 		}
 	})
 }
