@@ -1,0 +1,62 @@
+<html><head>
+	<meta charset="utf-8">
+	<title>Bucks — check your Brown account balances</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="/stylesheets/style.css">
+	<link rel="icon" href="/images/icon.png">
+	<link rel="apple-touch-icon-precomposed" href="/images/icon.png">
+	<script async="" src="//www.google-analytics.com/analytics.js"></script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><style type="text/css"></style>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37604830-3', 'bearbucks.herokuapp.com');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body style="">
+	
+<script>
+function logout() {
+	localStorage.removeItem('username');
+	localStorage.removeItem('password');
+	window.location = '/';
+}
+</script>
+
+<div id="controlBar">
+	<span id="username">nparrott</span>
+	<a id="logOut" href="javascript:logout()">Forget me</a>
+</div>
+
+<div id="balances">
+	<div>
+		<ul>
+			<li>
+				<div>Flex points</div>
+				<div>0.5</div>
+			</li>
+			<li>
+				<div>Meal credits</div>
+				<div>22</div>
+			</li>
+			<li>
+				<div>Bear bucks</div>
+				<div>1.2</div>
+			</li>
+			<li>
+				<div>PawPrints</div>
+				<div>27.48</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+</body></html>
